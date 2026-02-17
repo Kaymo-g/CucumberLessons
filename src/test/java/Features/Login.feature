@@ -7,6 +7,7 @@ Feature: User Login
     When the user enters valid email <email>
     And the user enters valid password <password>
     And the user clicks the login button
+    And the user clicks the learn icon
     Then the user has logged in successfully
 
     Examples:
