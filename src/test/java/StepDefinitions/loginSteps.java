@@ -27,6 +27,16 @@ public class loginSteps {
     public void the_user_clicks_the_login_button() {
         driver.findElement(By.id("login-submit")).click();
     }
+    @And("the user clicks the learn icon")
+    public void the_user_clicks_the_learn_icon(){
+        driver.findElement(By.xpath("//*[@id=\"app-root\"]/nav/div[1]/div[2]/div[1]/button/span[3]")).click();
+
+    }
+   /* @And("the user clicks on Learning Material")
+    public void the_user_clicks_on_Learning_Material(){
+        driver.findElement(By.xpath("//*[@id=\"app-root\"]/nav/div[1]/div[2]/div[1]/div/button[2]")).click();
+
+    } */
     @Then("the user has logged in successfully")
     public void the_user_has_logged_in_successfully() throws InterruptedException {
         //driver.findElement(By.xpath("//*[@id=\"app-main-content\"]/section/div[3]/div[1]/div[1]/h3")).isDisplayed();
