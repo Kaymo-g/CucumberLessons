@@ -8,6 +8,8 @@ Feature: User Login
     And the user enters valid password <password>
     And the user clicks the login button
     And the user clicks the learn icon
+    And the user clicks on Learning Material
+    And the user clicks Web Automation Basic Form
     Then the user has logged in successfully
 
     Examples:
