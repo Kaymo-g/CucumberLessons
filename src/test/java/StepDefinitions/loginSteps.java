@@ -34,8 +34,8 @@ public class loginSteps {
     }
     @And("the user clicks the learn icon")
     public void the_user_clicks_the_learn_icon(){
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[@class='arrow'])[1]")));
-        driver.findElement(By.xpath("(//span[@class='arrow'])[1]")).click();
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Learn']")));
+        driver.findElement(By.xpath("//span[normalize-space()='Learn']")).click();
     }
     @And("the user clicks on Learning Material")
     public void the_user_clicks_on_Learning_Material(){
