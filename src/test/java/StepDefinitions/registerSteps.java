@@ -1,9 +1,15 @@
 package StepDefinitions;
 
 import io.cucumber.java.en.*;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 
 public class registerSteps {
@@ -40,14 +46,29 @@ WebDriver driver;
     }
     @And("the user select the group")
     public void the_user_select_the_group(){
-        driver.findElement(By.id("register-group")).sendKeys("Nkosi tests (2026)");
+        driver.findElement(By.id("register-group")).sendKeys("group 5 assignment");
     }
     @And("the user clicks the create account button")
     public void the_user_clicks_the_create_account_button() {
+
         driver.findElement(By.id("register-submit")).click();
+
     }
     @Then("the user has successfully registered")
     public void the_user_has_successfully_registered() {
+       /* WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        try {
+            Alert alert = driver.switchTo().alert();
+            System.out.println(alert.getText());
+            alert.accept();
+        } catch (NoAlertPresentException e) {
+            System.out.println("No alert present at this time.");
+        }*/
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        System.out.println(alert.getText());
+        alert.accept();
 
     }
 

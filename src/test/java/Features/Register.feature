@@ -15,5 +15,5 @@ Feature: User Registration
     Then the user has successfully registered
 
     Examples:
-      |firstname |lastname |email             | password    |confirmPassword|
-      |Kamo  |Ledwaba  |kamo101@gmail.com  | Kamo@2026    |Kamo@2026       |
+      |firstname |lastname |email               | password    |confirmPassword|
+      |Kamo      |Ledwaba  |kamo1011@gmail.com  | Kamo@2026   |Kamo@2026      |
